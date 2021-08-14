@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/stylesheet.css" />
+    <title>VaccinationSurveyForm</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">VaccinationForm</h1>
+        <img  class="mainImg"src="https://theonebrief.com/wp-content/uploads/2021/03/Screen-Shot-2021-03-12-at-10.50.53-AM.png" alt="">
+        <form name="VaccineForm" action="/" method="POST" onsubmit="return validateForm()">
+            <div class="info">
+                <p class="para">Name</p>
+                <input class="data"type="text" name="name">
+            </div>
+            <div class="info">
+                <p class="para">Age</p>
+                <input type="number" class="data" name="age">
+            </div>
+            <div class="info">
+                <p class="para">Parent or Guardian Name</p>
+                <input type="text" class="data" name="parent">
+            </div>
+            <div class="info">
+                <p class="para">Address</p>
+                <input type="text" class="data" name="address">
+            </div>
+            <div class="info">
+                <p class="para">Contact Number</p>
+                <input type="number" class="data" name="contact">
+            </div>
+            <div class="info">
+                <p class="para">Vaccinated </p>
+                <input type="radio" id="option1" onclick="display()" name="vaccinated" value="Yes"><label for="option1">Yes</label>
+                <input type="radio" id="option2" onclick="display()" name="vaccinated" value="No"><label for="option2">No</label>
+            </div>
+            <div class="info" id="vaccineName">
+                <p class="para">Name of Vaccine</p>
+                <input type="text" class="data" name="vaccineName">
+            </div>
+            <div class="info" id="vaccinated">
+                <p class="para">Number of Doses you got</p>
+                <input type="radio" id="dose1" onclick="display()" name="dose" value="dose1"><label for="dose1">1</label>
+                <input type="radio" id="dose2" onclick="display()" name="dose" value="dose2"><label for="dose2">2</label>
+            </div>
+            <div class="info" id="vaccineDate">
+                <p class="para">Date of 1st dose</p>
+                <input type="date" class="data" name="doseDate">
+            </div>
+            <button type="submit" class="btn"> Submit</button>
+        </form>
+        </div>
+    <script src="../static/MainJava.js" ></script>
+</body>
+</html>
